@@ -1,0 +1,31 @@
+<h1>User List Details</h1>
+
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Email</th>
+            <th>Gender</th>
+            <th>Actions</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let u of users">
+            <td>{{ u.id }}</td>
+            <td>{{ u.name }}</td>
+            <td>{{ u.address }}</td>
+            <td>{{ u.email }}</td>
+            <td>{{ u.gender }}</td>
+            <td>
+                <button type="button" class="btn btn-danger">Approve</button>
+                <button type="button" (click)="BookDelete(u.id)" class="btn btn-primary">
+
+          Delete
+        </button>
+            </td>
+        </tr>
+    </tbody>
+</table>
